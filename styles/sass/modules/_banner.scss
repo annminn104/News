@@ -1,0 +1,28 @@
+.banner {
+  &-item {
+    height: 50vh;
+    &-content {
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      transform: translate(-10%, -50%);
+      padding: 1rem 2rem;
+      width: 50%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    &-dot {
+      .react-multi-carousel-dot {
+        button {
+          border-color: rgb(245 158 11);
+        }
+        &--active {
+          button {
+            background: rgb(245 158 11);
+          }
+        }
+      }
+    }
+  }
+}
