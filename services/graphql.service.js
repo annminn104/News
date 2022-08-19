@@ -27,10 +27,10 @@ export const getSocialMedia = async () => {
   return result.socialMediasConnection.edges;
 };
 
-export const getPopularPosts = async () => {
+export const getPopularPost = async () => {
   const query = gql`
     query getPopularPost() {
-      posts(where: {popularPost: true}, orderBy: createdAt_DESC, last: 5) {
+      posts(where: {popularPost: true}, orderBy: createdAt_DESC, first: 5) {
         id
         createdAt
         slug
@@ -51,7 +51,7 @@ export const getPopularPosts = async () => {
 export const getBanner = async () => {
   const query = gql`
     query getPopularPost() {
-      posts(orderBy: createdAt_DESC, last: 3) {
+      posts(orderBy: createdAt_ASC, last: 3) {
         id
         createdAt
         slug
@@ -63,6 +63,76 @@ export const getBanner = async () => {
         featuredImage {
           url
         }     
+      }
+    }   
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.posts;
+};
+
+export const getFeaturedNews = async () => {
+  const query = gql`
+    query getFeaturedNews() {
+      posts(where: {featuredPost: true}, orderBy: createdAt_DESC, first: 5) {
+        id
+        createdAt
+        slug
+        title
+        excerpt
+        author {
+          name
+        }
+        featuredImage {
+          url
+        }     
+      }
+    }   
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.posts;
+};
+
+export const getDontMiss = async () => {
+  const query = gql`
+    query getDontMiss() {
+      posts(where: {dontMiss: true}, orderBy: createdAt_DESC, first: 8) {
+        id
+        createdAt
+        slug
+        title
+        excerpt
+        author {
+          name
+        }
+        featuredImage {
+          url
+        }     
+      }
+    }   
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.posts;
+};
+
+export const getLastestUpdate = async () => {
+  const query = gql`
+    query getLastestUpdate() {
+      posts(orderBy: updatedAt_DESC, first: 3) {
+        id
+        createdAt
+        slug
+        title
+        excerpt
+        author {
+          name
+        }
+        featuredImage {
+          url
+        } 
+        categories {
+          id
+          name
+        }    
       }
     }   
   `;

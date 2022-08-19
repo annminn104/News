@@ -6,7 +6,7 @@ const ContactMe = ({ socials }) => {
   return (
     <React.Fragment>
       <div className="border-t-2 border-black mb-8">
-        <h4 className="text-lg font-bold uppercase text-white bg-black inline-block px-4 mb-4">Contact me</h4>
+        <h3 className="text-lg font-bold uppercase text-white bg-black inline-block px-4 mb-4">Contact me</h3>
         <ul>
           {socials.map((social) => (
             <li key={social.node.id} className="mb-2">

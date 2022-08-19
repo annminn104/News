@@ -23,8 +23,6 @@ const responsive = {
 };
 
 const Banner = ({ banner }) => {
-  console.log(banner);
-
   const CustomLeftArrow = ({ onClick, ...rest }) => {
     const {
       onMove,
@@ -66,13 +64,16 @@ const Banner = ({ banner }) => {
           sliderClass="banner-list"
           itemClass="flex items-center h-full"
           dotListClass="banner-item-dot"
+          autoPlay={true}
         >
           {banner.map((post, index) => (
             <div className="banner-item" key={post.id}>
-              <Image src={post.featuredImage.url} layout="fill" alt="" />
+              <div className="absolute top-0 w-full h-full banner-item-image">
+                <Image unoptimized src={post.featuredImage.url} layout="fill" alt="" priority={true} />
+              </div>
               <div className="banner-item-content">
-                <h1 className="text-4xl font-bold text-amber-500 mb-2">{post.title}</h1>
-                <h2 className="text-xl font-bold text-amber-500 mb-2">{post.excerpt}</h2>
+                <h1 className="text-xl lg:text-4xl font-bold text-amber-500 mb-2">{post.title}</h1>
+                <p className="font-medium text-amber-500 mb-2 line-clamp-3">{post.excerpt}</p>
                 <button className=" text-amber-500 py-1 px-2 border-2 border-amber-500 hover:bg-amber-500 hover:text-white font-bold">READ MORE</button>
               </div>
             </div>

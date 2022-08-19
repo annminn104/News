@@ -1,15 +1,24 @@
 .banner {
   &-item {
-    height: 50vh;
+    height: 70vh;
+    max-height: 1024px;
+    min-height: 400px;
+    img {
+      object-fit: cover;
+      // position: relative !important;
+    }
     &-content {
       position: absolute;
       left: 10%;
       top: 50%;
       transform: translate(-10%, -50%);
       padding: 1rem 2rem;
-      width: 50%;
-      @media screen and (max-width: 768px) {
-        width: 100%;
+      width: 100%;
+      @media screen and (min-width: 768px) {
+        width: 70%;
+      }
+      @media screen and (min-width: 1024px) {
+        width: 50%;
       }
     }
     &-dot {
