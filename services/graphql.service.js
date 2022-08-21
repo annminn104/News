@@ -2,6 +2,36 @@ import { request, gql } from "graphql-request";
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
+export const getLastestNews = async () => {
+  const query = gql`
+    query getLastestNew {
+      posts(orderBy: publishedAt_DESC, last: 10) {
+        id
+        title
+        slug
+        excerpt
+        createdAt
+        featuredImage {
+          url
+        }
+        author {
+          name
+          id
+          photo {
+            url
+          }
+        }
+        categories {
+          name
+          id
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.posts;
+};
+
 export const getSocialMedia = async () => {
   const query = gql`
     query getSocialMedia {

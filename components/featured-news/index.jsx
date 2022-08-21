@@ -20,7 +20,7 @@ const FeaturedNews = ({ featuredNews }) => {
                 <p className="text-sm font-semibold">{featuredNews[0].author.name}</p>
                 <p className="text-sm text-gray-500">{moment(featuredNews[0].createdAt).format("MMM DD, YYYY")}</p>
               </div>
-              <p className="line-clamp-3 text-gray-500">{featuredNews[0].excerpt}</p>
+              <p className="text-sm line-clamp-3 text-gray-500">{featuredNews[0].excerpt}</p>
             </div>
           </div>
           <div className="lg:col-span-6 col-span-1 grid grid-rows-4 lg:grid-rows-2 grid-flow-col gap-2 xl:gap-4">
