@@ -19,9 +19,9 @@
     "prismjs": "^1.28.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-h5-audio-player": "^3.8.4",
     "react-infinite-scroll-component": "^6.1.0",
     "react-multi-carousel": "^2.8.2",
-    "react-player": "^2.10.1",
     "sass": "^1.54.4"
   },
   "devDependencies": {

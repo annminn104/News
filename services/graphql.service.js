@@ -169,3 +169,27 @@ export const getLastestUpdate = async () => {
   const result = await request(graphqlAPI, query);
   return result.posts;
 };
+
+export const getMusics = async () => {
+  const query = gql`
+    query getMusics() {
+      musics {       
+        id
+        title
+        artist
+        link
+        image {
+          url
+        }
+        author {
+          name
+          photo {
+            url
+          }
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+  return result.musics;
+};
