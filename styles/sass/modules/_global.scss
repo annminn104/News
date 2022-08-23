@@ -27,6 +27,10 @@ body {
   }
 }
 
+.not-found {
+  max-height: calc(100vh - 64px);
+}
+
 @media screen and (max-width: 1440px) {
   .container {
     max-width: 100% !important;
