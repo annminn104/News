@@ -1,0 +1,8 @@
+.music-app {
+  &-container {
+    @media screen and (max-height: 698px) {
+      max-height: calc(100vh - 58px);
+      overflow-y: auto;
+    }
+  }
+}

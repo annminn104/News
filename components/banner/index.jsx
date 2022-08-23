@@ -72,9 +72,9 @@ const Banner = ({ banner }) => {
                 <Image unoptimized src={post.featuredImage.url} layout="fill" alt="" priority={true} />
               </div>
               <div className="banner-item-content">
-                <h1 className="text-xl lg:text-4xl font-bold text-amber-500 mb-2">{post.title}</h1>
-                <p className="font-medium text-amber-500 mb-2 line-clamp-3">{post.excerpt}</p>
-                <button className=" text-amber-500 py-1 px-2 border-2 border-amber-500 hover:bg-amber-500 hover:text-white font-bold">READ MORE</button>
+                <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-amber-500 mb-2">{post.title}</h1>
+                <p className="text-sm md:text-base text-amber-500 mb-2 line-clamp-3">{post.excerpt}</p>
+                <button className="text-amber-500 py-1 px-2 border-2 border-amber-500 hover:bg-amber-500 hover:text-white font-bold">READ MORE</button>
               </div>
             </div>
           ))}

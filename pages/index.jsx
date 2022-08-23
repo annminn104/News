@@ -7,6 +7,7 @@ import { FeaturedNews } from "../components/featured-news";
 import { DontMiss } from "../components/dont-miss";
 import { LastestUpdate } from "../components/lastest-update";
 import { LastestNews } from "../components/lastest-news";
+import { BreakingNews } from "../components/breaking-news";
 
 import { getBanner, getSocialMedia, getPopularPost, getFeaturedNews, getDontMiss, getLastestUpdate, getLastestNews } from "../services/graphql.service";
 
@@ -14,6 +15,7 @@ export default function Home({ banner, socials, popularPost, lastestNews, featur
   return (
     <React.Fragment>
       <div className="container mx-auto bg-yellow-50">
+        <BreakingNews />
         <Banner banner={banner} />
         <div className="grid grid-cols-1 lg:grid-cols-12 z-20">
           <div className="lg:col-span-4 col-span-1 px-4 lg:px-8 border-r border-zinc-300  lg:order-1 order-2">

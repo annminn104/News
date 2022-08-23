@@ -60,7 +60,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="bg-amber-600 px-4 lg:px-8 py-2">
+        <div className="bg-amber-600 px-4 lg:px-8 py-4">
           <h1>Footer bottom</h1>
         </div>
       </div>

@@ -15,6 +15,18 @@ body {
   // }
 }
 
+.rhap_container {
+  background-color: transparent;
+  box-shadow: 0 0 0;
+}
+
+.marquee-container {
+  .overlay {
+    --gradient-color: transparent, transparent !important;
+    --gradient-width: 0px !important;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .container {
     max-width: 100% !important;

@@ -11,31 +11,43 @@ const FeaturedNews = ({ featuredNews }) => {
         <a className="absolute right-0 top-1 cursor-pointer hover:text-red-500 uppercase text-sm font-semibold">View All</a>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           <div className="lg:col-span-6 col-span-1 border-b border-zinc-300 pb-2">
-            <div className="relative h-[24rem] lg:h-[18rem] mb-2">
-              <Image src={featuredNews[0].featuredImage.url} layout="fill" alt="" className="object-cover" />
-            </div>
-            <div className="">
-              <h4 className="text-xl font-bold mb-2 line-clamp-2">{featuredNews[0].title}</h4>
-              <div className="flex justify-between mb-2">
+            <Link href={featuredNews[0].slug}>
+              <a className="block relative h-[24rem] lg:h-[18rem] mb-2">
+                <Image src={featuredNews[0].featuredImage.url} layout="fill" alt="" className="object-cover" />
+              </a>
+            </Link>
+            <div className="flex flex-col gap-1 md:gap-2">
+              <Link href={featuredNews[0].slug}>
+                <a className="hover:text-rose-600">
+                  <h4 className="md:text-xl font-bold line-clamp-2">{featuredNews[0].title}</h4>
+                </a>
+              </Link>
+              <div className="flex justify-between">
                 <p className="text-sm font-semibold">{featuredNews[0].author.name}</p>
                 <p className="text-sm text-gray-500">{moment(featuredNews[0].createdAt).format("MMM DD, YYYY")}</p>
               </div>
-              <p className="text-sm line-clamp-3 text-gray-500">{featuredNews[0].excerpt}</p>
+              <p className="text-xs line-clamp-3 text-gray-500">{featuredNews[0].excerpt}</p>
             </div>
           </div>
-          <div className="lg:col-span-6 col-span-1 grid grid-rows-4 lg:grid-rows-2 grid-flow-col gap-2 xl:gap-4">
+          <ul className="lg:col-span-6 col-span-1 grid grid-rows-4 lg:grid-rows-2 grid-flow-col gap-2 xl:gap-4">
             {featuredNews.slice(1).map((post) => (
-              <div key={post.id} className="border-b border-zinc-300 grid grid-cols-12 lg:block gap-2 pb-2 lb:pb-0">
-                <div className="col-span-4 relative h-[7rem] object-cover lg:w-full lg:h-3/5">
-                  <Image src={post.featuredImage.url} layout="fill" alt="" className="object-cover" />
-                </div>
-                <div className="col-span-8 w-full flex flex-col justify-center">
-                  <h4 className="font-semibold mb-1 line-clamp-2">{post.title}</h4>
+              <li key={post.id} className="border-b border-zinc-300 grid grid-cols-12 lg:block gap-2 pb-2 lb:pb-0">
+                <Link href={post.slug}>
+                  <a className="block col-span-4 relative h-[7rem] object-cover w-full lg:h-3/5">
+                    <Image src={post.featuredImage.url} layout="fill" alt="" className="object-cover" />
+                  </a>
+                </Link>
+                <div className="col-span-8 w-full flex flex-col mb-1 justify-center">
+                  <Link href={post.slug}>
+                    <a className="hover:text-rose-600">
+                      <h4 className="font-semibold line-clamp-2">{post.title}</h4>
+                    </a>
+                  </Link>
                   <p className="text-xs text-gray-500">{moment(featuredNews[0].createdAt).format("MMM DD, YYYY")}</p>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </React.Fragment>

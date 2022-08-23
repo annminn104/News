@@ -1,0 +1,12 @@
+.header {
+  &-item {
+    &-active {
+      background-color: rgb(217 119 6) !important;
+      color: white !important;
+      @media screen and (min-width: 768px) {
+        background-color: transparent !important;
+        color: rgb(225 29 72) !important;
+      }
+    }
+  }
+}

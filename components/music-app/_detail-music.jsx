@@ -5,7 +5,7 @@ import AudioPlayer from "react-h5-audio-player";
 import { Musics } from "./_context";
 
 const DetailMusic = () => {
-  const { currentMusic, indexMusic, musics, handleSetMusic, settingMusic } = useContext(Musics);
+  const { currentMusic, indexMusic, musics, handleSetMusic } = useContext(Musics);
 
   const handleClickNext = () => {
     const index = musics.findIndex((v, index) => index === indexMusic);
@@ -37,8 +37,8 @@ const DetailMusic = () => {
   return (
     <React.Fragment>
       {currentMusic !== undefined ? (
-        <div className={`flex flex-col items-center ${settingMusic ? "mb-3" : ""}`}>
-          {settingMusic && <Image src={currentMusic?.image?.url} width="200px" height="200px" alt="" className="rounded-xl object-cover shadow-cyan-500/50" />}
+        <div className="flex flex-col items-center mb-3">
+          <Image src={currentMusic?.image?.url} width="200px" height="200px" alt="" className="rounded-xl object-cover shadow-cyan-500/50" />
           <h4 className="text-2xl font-semibold">{currentMusic?.title}</h4>
           <p className="text-sm text-gray-500">{currentMusic?.artist}</p>
           <div className="w-full ">
@@ -49,7 +49,7 @@ const DetailMusic = () => {
               showJumpControls={false}
               onClickNext={handleClickNext}
               onClickPrevious={handleClickPrev}
-              volume={0.3}
+              volume={0.1}
               className="am-audio"
               onEnded={handleCompletePlay}
               autoPlay={true}
