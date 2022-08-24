@@ -1,5 +1,6 @@
 import React from "react";
 import { NextSeo } from "next-seo";
+import dynamic from "next/dynamic";
 
 import "react-h5-audio-player/lib/styles.css";
 import "tailwindcss/tailwind.css";

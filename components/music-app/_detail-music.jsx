@@ -17,17 +17,15 @@ const DetailMusic = () => {
   };
 
   useEffect(() => {
-    getdata();
-  }, [currentMusic]);
+    handleInitAudio();
+  });
 
-  const getdata = () => {
-    setTimeout(() => {
-      if (currentMusic !== undefined) {
-        const data = document.getElementsByClassName("am-audio");
-        const audio = data[0].querySelector("audio");
-        audio.setAttribute("src", `${currentMusic.link}`);
-      }
-    });
+  const handleInitAudio = () => {
+    if (currentMusic !== undefined) {
+      const data = document.getElementsByClassName("am-audio");
+      const audio = data[0].querySelector("audio");
+      audio.setAttribute("src", `${currentMusic.link}`);
+    }
   };
 
   const handleCompletePlay = (event) => {

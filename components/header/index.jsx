@@ -21,15 +21,14 @@ const Header = () => {
   });
 
   useEffect(() => {
-    return () => {
-      if (window.innerWidth < 767) {
-        setIsMobile(true);
-        setIsMenu(false);
-      } else {
-        setIsMobile(false);
-        setIsMenu(true);
-      }
-    };
+    if (window.innerWidth < 767) {
+      setIsMobile(true);
+      setIsMenu(false);
+    } else {
+      setIsMobile(false);
+      setIsMenu(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleShowMenu = () => {

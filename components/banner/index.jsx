@@ -30,7 +30,7 @@ const Banner = ({ banner }) => {
     } = rest;
     return (
       <button className="absolute arrow-btn left-0 text-center py-5 cursor-pointer active:opacity-80 bg-slate-400 hover:bg-amber-500" onClick={() => onClick()}>
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-white w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
@@ -44,7 +44,7 @@ const Banner = ({ banner }) => {
     } = rest;
     return (
       <button className="absolute arrow-btn right-0 text-center py-5 cursor-pointer active:opacity-80 bg-slate-400 hover:bg-amber-500" onClick={() => onClick()}>
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-white w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
         </svg>
       </button>
@@ -61,7 +61,7 @@ const Banner = ({ banner }) => {
           ssr={true}
           showDots={true}
           responsive={responsive}
-          sliderClass="banner-list"
+          sliderClass="banner-list relative"
           itemClass="flex items-center h-full"
           dotListClass="banner-item-dot"
           autoPlay={true}

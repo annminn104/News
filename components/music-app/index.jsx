@@ -12,16 +12,22 @@ const MusicApp = () => {
   const [settingMusic, setSettingMusic] = useState(false);
 
   useEffect(() => {
-    return () => {
+    const isDev = process.env.NODE_ENV === "development";
+    if (isDev) {
+      return () => {
+        fetchData();
+      };
+    } else {
       fetchData();
-    };
+    }
   }, []);
 
   const fetchData = async () => {
     try {
       const resMusic = await getMusics();
-      await setMusics(resMusic);
-      await setCurrentMusic(resMusic[0]);
+      setMusics(resMusic);
+      setCurrentMusic(resMusic[0]);
+      console.log(currentMusic);
     } catch (error) {
       console.log(error);
     }
