@@ -36,3 +36,40 @@ body {
     max-width: 100% !important;
   }
 }
+
+pre[class*="language-"] {
+  padding: 1em;
+  margin: auto 0 1rem;
+  overflow: auto;
+}
+
+div > iframe {
+  padding-bottom: 1rem !important;
+}
+
+table {
+  th,
+  td {
+    border: 1px solid rgb(113 113 122);
+    padding: 0.5rem 1rem;
+    p {
+      margin-bottom: 0 !important;
+    }
+  }
+  thead {
+    tr {
+      th {
+        background: rgb(113 113 122);
+        color: #fff;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  table {
+    th,
+    td {
+      padding: 0.5rem;
+    }
+  }
+}

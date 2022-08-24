@@ -17,14 +17,24 @@ const DetailMusic = () => {
   };
 
   useEffect(() => {
-    handleInitAudio();
+    const isDev = process.env.NODE_ENV === "development";
+    if (isDev) {
+      return () => {
+        handleInitAudio();
+      };
+    } else {
+      handleInitAudio();
+    }
   });
 
   const handleInitAudio = () => {
+    console.log(currentMusic);
     if (currentMusic !== undefined) {
       const data = document.getElementsByClassName("am-audio");
       const audio = data[0].querySelector("audio");
-      audio.setAttribute("src", `${currentMusic.link}`);
+      if (!audio.getAttribute("src")) {
+        audio.setAttribute("src", `${currentMusic.link}`);
+      }
     }
   };
 

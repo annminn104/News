@@ -27,7 +27,6 @@ const MusicApp = () => {
       const resMusic = await getMusics();
       setMusics(resMusic);
       setCurrentMusic(resMusic[0]);
-      console.log(currentMusic);
     } catch (error) {
       console.log(error);
     }

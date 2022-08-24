@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 import "../styles/sass/index.scss";
 
 import { Layout } from "../components/layout";
-import { MusicApp } from "../components/music-app";
+
 import { SEO } from "../components/seo";
 
 export default function MyApp({ Component, pageProps }) {
@@ -17,7 +17,6 @@ export default function MyApp({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} className="z-20" />
       </Layout>
-      <MusicApp />
     </React.Fragment>
   );
 }
