@@ -1,6 +1,4 @@
 import React from "react";
-import { NextSeo } from "next-seo";
-import dynamic from "next/dynamic";
 
 import "react-h5-audio-player/lib/styles.css";
 import "tailwindcss/tailwind.css";
@@ -10,11 +8,12 @@ import "../styles/sass/index.scss";
 
 import { Layout } from "../components/layout";
 import { MusicApp } from "../components/music-app";
+import { SEO } from "../components/seo";
 
 export default function MyApp({ Component, pageProps }) {
   return (
     <React.Fragment>
-      <NextSeo title="News" />
+      <SEO />
       <Layout>
         <Component {...pageProps} className="z-20" />
       </Layout>
