@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import Carousel from "react-multi-carousel";
+import Link from "next/link";
 
 const responsive = {
   superLargeDesktop: {
@@ -74,7 +75,11 @@ const Banner = ({ banner }) => {
               <div className="banner-item-content">
                 <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-amber-500 mb-2">{post.title}</h1>
                 <p className="text-sm md:text-base text-amber-500 mb-2 line-clamp-3">{post.excerpt}</p>
-                <button className="text-amber-500 py-1 px-2 border-2 border-amber-500 hover:bg-amber-500 hover:text-white font-bold">READ MORE</button>
+                <button className="text-amber-500 py-1 px-2 border-2 border-amber-500 hover:bg-amber-500 hover:text-white font-bold">
+                  <Link href={post.slug}>
+                    <a>READ MORE</a>
+                  </Link>
+                </button>
               </div>
             </div>
           ))}
