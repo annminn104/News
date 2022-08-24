@@ -39,7 +39,7 @@ const DontMiss = ({ dontMiss }) => {
               <div className="grid grid-cols-12 gap-2 items-center h-full w-full">
                 <Link href={post.slug}>
                   <a className="col-span-4 lg:col-span-5 h-[7rem] relative">
-                    <Image src={post.featuredImage.url} layout="fill" alt={post.name} className="object-cover" />
+                    <Image src={post.featuredImage.url} layout="fill" alt={post.title} className="object-cover" />
                   </a>
                 </Link>
                 <div className="col-span-8 lg:col-span-7 flex flex-col gap-1">

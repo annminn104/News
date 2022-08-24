@@ -16,13 +16,15 @@ const LastestNews = ({ lastestNews }) => {
                 <div className="col-span-4">
                   <Link href={post.slug}>
                     <a className="block relative h-[10rem]">
-                      <Image src={post.featuredImage.url} layout="fill" alt={post.title} className="object-cover" />
+                      <Image src={post.featuredImage.url} layout="fill" alt={post.title} className="lef-0 object-cover" />
                     </a>
                   </Link>
                 </div>
                 <div className="col-span-8 flex flex-col justify-center">
                   <div className="flex items-center gap-2 b">
-                    <Image src={post.author.photo.url} width="30px" height="30px" alt={post.title} className="rounded-full" />
+                    <div className="w-8 h-8 relative">
+                      <Image src={post.author.photo.url} layout="fill" alt={post.title} className="object-cover rounded-full" />
+                    </div>
                     <p className="text-sm font-medium" data-tip={post.author.nam}>
                       {post.author.name}
                     </p>

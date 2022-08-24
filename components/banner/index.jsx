@@ -52,6 +52,9 @@ const Banner = ({ banner }) => {
     );
   };
 
+  const imageBlur =
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjEwODAiPjxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSIxOTE2IiBoZWlnaHQ9IjEwNzYiIHN0eWxlPSJmaWxsOiNkZWRlZGU7c3Ryb2tlOiM1NTU1NTU7c3Ryb2tlLXdpZHRoOjIiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIxOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgYWxpZ25tZW50LWJhc2VsaW5lPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UsIHNhbnMtc2VyaWYiIGZpbGw9IiM1NTU1NTUiPmxvYWRpbmc8L3RleHQ+PC9zdmc+";
+
   return (
     <React.Fragment>
       <div className="mb-10">
@@ -70,13 +73,13 @@ const Banner = ({ banner }) => {
           {banner.map((post, index) => (
             <div className="banner-item" key={post.id}>
               <div className="absolute top-0 w-full h-full banner-item-image">
-                <Image unoptimized src={post.featuredImage.url} layout="fill" alt="" priority={true} />
+                <Image src={post.featuredImage.url} layout="fill" alt="" priority={true} placeholder="blur" blurDataURL={imageBlur} />
               </div>
               <div className="banner-item-content">
                 <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-amber-500 mb-2">{post.title}</h1>
                 <p className="text-sm md:text-base text-amber-500 mb-2 line-clamp-3">{post.excerpt}</p>
                 <button className="text-amber-500 py-1 px-2 border-2 border-amber-500 hover:bg-amber-500 hover:text-white font-bold">
-                  <Link href={post.slug}>
+                  <Link href={post.slug} aria-label={post.title}>
                     <a>READ MORE</a>
                   </Link>
                 </button>

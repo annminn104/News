@@ -11,7 +11,9 @@ const ContactMe = ({ socials }) => {
           {socials.map((social) => (
             <li key={social.node.id} className="mb-2">
               <a href={social.node.link} target="_blank" className="flex gap-4 items-center" style={{ backgroundColor: social.node.color.hex }}>
-                <Image src={social.node.icon.url} width="34px" height="34px" alt={social.node.name} />
+                <div className="w-8 h-8 relative">
+                  <Image src={social.node.icon.url} layout="fill" alt={social.node.name} />
+                </div>
                 <p className="text-white">{social.node.name}</p>
               </a>
             </li>

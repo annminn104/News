@@ -6,6 +6,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["media.graphassets.com"],
+    formats: ["image/webp"],
   },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],

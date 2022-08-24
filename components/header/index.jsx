@@ -59,7 +59,7 @@ const Header = () => {
                   <a className="font-semibold">Home</a>
                 </Link>
               </li>
-              <li className="py-2 px-4 md:px-0 hover:bg-amber-100 md:text-amber-500 md:hover:text-rose-600 md:hover:bg-transparent w-full text-center">
+              {/* <li className="py-2 px-4 md:px-0 hover:bg-amber-100 md:text-amber-500 md:hover:text-rose-600 md:hover:bg-transparent w-full text-center">
                 <a className="font-semibold">About</a>
               </li>
               <li className="py-2 px-4 md:px-0 hover:bg-amber-100 md:text-amber-500 md:hover:text-rose-600 md:hover:bg-transparent w-full text-center">
@@ -67,7 +67,7 @@ const Header = () => {
               </li>
               <li className="py-2 px-4 md:px-0 hover:bg-amber-100 md:text-amber-500 md:hover:text-rose-600 md:hover:bg-transparent w-full text-center">
                 <a className="font-semibold">Contact</a>
-              </li>
+              </li> */}
             </ul>
           </div>
           <button onClick={handleShowMenu} className={`${isMobile ? "block" : "hidden"}`}>
