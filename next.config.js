@@ -5,12 +5,6 @@ const nextConfig = {
   images: {
     domains: ["media.graphassets.com"],
   },
-  compiler: {
-    ssr: true,
-  },
-  experimental: {
-    serverComponents: true,
-  },
 };
 
 module.exports = nextConfig;

@@ -36,7 +36,7 @@ const DetailMusic = () => {
 
   return (
     <React.Fragment>
-      {currentMusic !== undefined ? (
+      {currentMusic && (
         <div className="flex flex-col items-center mb-3">
           <Image src={currentMusic?.image?.url} width="200px" height="200px" alt="" className="rounded-xl object-cover shadow-cyan-500/50" />
           <h4 className="text-2xl font-semibold">{currentMusic?.title}</h4>
@@ -56,8 +56,6 @@ const DetailMusic = () => {
             />
           </div>
         </div>
-      ) : (
-        <></>
       )}
     </React.Fragment>
   );
