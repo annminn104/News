@@ -28,7 +28,6 @@ const DetailMusic = () => {
   });
 
   const handleInitAudio = () => {
-    console.log(currentMusic);
     if (currentMusic !== undefined) {
       const data = document.getElementsByClassName("am-audio");
       const audio = data[0].querySelector("audio");

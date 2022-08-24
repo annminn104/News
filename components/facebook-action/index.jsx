@@ -4,8 +4,6 @@ import { useRouter } from "next/router";
 const FacebookAction = ({ href, numPosts, width }) => {
   const router = useRouter();
 
-  console.log(href, numPosts, width);
-
   return (
     <React.Fragment>
       <div>
