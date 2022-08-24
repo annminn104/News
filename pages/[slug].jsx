@@ -46,6 +46,11 @@ export default PostPage;
 
 export async function getServerSideProps({ params }) {
   const [socials, popularPost, post] = await Promise.all([getSocialMedia(), getPopularPost(), getPostDetails(params.slug)]);
+  if (!post) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       socials,
