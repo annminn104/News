@@ -5,7 +5,7 @@ import AudioPlayer from "react-h5-audio-player";
 import { Musics } from "./_context";
 
 const DetailMusic = () => {
-  const { currentMusic, indexMusic, musics, handleSetMusic } = useContext(Musics);
+  const { currentMusic, indexMusic, musics, handleSetMusic, setIsPlaying } = useContext(Musics);
 
   const handleClickNext = () => {
     const index = musics.findIndex((v, index) => index === indexMusic);
@@ -38,7 +38,18 @@ const DetailMusic = () => {
   };
 
   const handleCompletePlay = (event) => {
+    // console.log("end", event);
     handleSetMusic(indexMusic + 1);
+  };
+
+  const handlePlaying = (event) => {
+    // console.log("playing", event);
+    setIsPlaying(true);
+  };
+
+  const handlePause = (event) => {
+    // console.log("pause", event);
+    setIsPlaying(false);
   };
 
   return (
@@ -60,6 +71,8 @@ const DetailMusic = () => {
               className="am-audio"
               onEnded={handleCompletePlay}
               autoPlay={true}
+              onPlaying={handlePlaying}
+              onPause={handlePause}
             />
           </div>
         </div>

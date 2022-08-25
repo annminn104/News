@@ -12,7 +12,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
   },
   compiler: {
-    removeConsole: true,
+    // removeConsole: true,
   },
 };
 

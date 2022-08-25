@@ -31,13 +31,13 @@ const FeaturedNews = ({ featuredNews }) => {
           </div>
           <ul className="lg:col-span-6 col-span-1 grid grid-rows-4 lg:grid-rows-2 grid-flow-col gap-2 xl:gap-4">
             {featuredNews.slice(1).map((post) => (
-              <li key={post.id} className="border-b border-zinc-300 grid grid-cols-12 lg:block gap-2 pb-2 lb:pb-0">
+              <li key={post.id} className="border-b border-zinc-300 grid grid-cols-12 lg:grid-cols-none lg:grid-rows-1 gap-2 pb-2 lb:pb-0 border">
                 <Link href={post.slug}>
-                  <a className="block col-span-4 relative h-[7rem] object-cover w-full lg:h-3/5">
+                  <a className="col-span-4 lg:col-span-12 h-[auto] min-h-[7rem] max-h-[8.5rem] relative">
                     <Image src={post.featuredImage.url} layout="fill" alt="" className="object-cover" />
                   </a>
                 </Link>
-                <div className="col-span-8 w-full flex flex-col mb-1 justify-center">
+                <div className="col-span-8 lg:col-span-12 w-full flex flex-col mb-1 justify-center">
                   <Link href={post.slug}>
                     <a className="hover:text-rose-600">
                       <h4 className="font-semibold line-clamp-2">{post.title}</h4>

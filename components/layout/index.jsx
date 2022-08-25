@@ -1,4 +1,6 @@
 import React from "react";
+import Draggable from "react-draggable";
+
 import { Header } from "../header";
 import { Footer } from "../footer";
 import { MusicApp } from "../music-app";
@@ -8,8 +10,8 @@ const Layout = ({ children }) => {
     <React.Fragment>
       <Header />
       <main className="mt-[3.5rem] md:mt-[3.7rem]">{children}</main>
-      <MusicApp />
       <Footer />
+      <MusicApp />
     </React.Fragment>
   );
 };

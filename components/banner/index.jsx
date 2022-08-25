@@ -30,7 +30,7 @@ const Banner = ({ banner }) => {
       carouselState: { currentSlide, deviceType },
     } = rest;
     return (
-      <button className="absolute arrow-btn left-0 text-center py-5 cursor-pointer active:opacity-80 bg-slate-400 hover:bg-amber-500" onClick={() => onClick()}>
+      <button className="absolute arrow-btn left-0 text-center py-5 cursor-pointer active:opacity-80 bg-slate-400 hover:bg-amber-500" onClick={() => onClick()} aria-label="left-arrow-banner">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-white w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
@@ -44,7 +44,7 @@ const Banner = ({ banner }) => {
       carouselState: { currentSlide, deviceType },
     } = rest;
     return (
-      <button className="absolute arrow-btn right-0 text-center py-5 cursor-pointer active:opacity-80 bg-slate-400 hover:bg-amber-500" onClick={() => onClick()}>
+      <button className="absolute arrow-btn right-0 text-center py-5 cursor-pointer active:opacity-80 bg-slate-400 hover:bg-amber-500" onClick={() => onClick()} aria-label="right-arrow-banner">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 text-white w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
         </svg>
@@ -73,13 +73,13 @@ const Banner = ({ banner }) => {
           {banner.map((post, index) => (
             <div className="banner-item" key={post.id}>
               <div className="absolute top-0 w-full h-full banner-item-image">
-                <Image src={post.featuredImage.url} layout="fill" alt="" priority={true} placeholder="blur" blurDataURL={imageBlur} />
+                <Image src={post.featuredImage.url} layout="fill" alt="" placeholder="blur" blurDataURL={imageBlur} />
               </div>
               <div className="banner-item-content">
                 <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-amber-500 mb-2">{post.title}</h1>
                 <p className="text-sm md:text-base text-amber-500 mb-2 line-clamp-3">{post.excerpt}</p>
-                <button className="text-amber-500 py-1 px-2 border-2 border-amber-500 hover:bg-amber-500 hover:text-white font-bold">
-                  <Link href={post.slug} aria-label={post.title}>
+                <button className="text-amber-500 py-1 px-2 border-2 border-amber-500 hover:bg-amber-500 hover:text-white font-bold" aria-label={post.title}>
+                  <Link href={post.slug}>
                     <a>READ MORE</a>
                   </Link>
                 </button>

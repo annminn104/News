@@ -38,7 +38,7 @@ const DontMiss = ({ dontMiss }) => {
             <li key={post.id} className="py-2 border-b border-red-100">
               <div className="grid grid-cols-12 gap-2 items-center h-full w-full">
                 <Link href={post.slug}>
-                  <a className="col-span-4 lg:col-span-5 h-[7rem] relative">
+                  <a className="col-span-4 lg:col-span-5 h-[auto] min-h-[7rem] max-h-[8.5rem] relative">
                     <Image src={post.featuredImage.url} layout="fill" alt={post.title} className="object-cover" />
                   </a>
                 </Link>

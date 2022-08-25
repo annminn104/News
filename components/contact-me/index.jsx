@@ -10,9 +10,9 @@ const ContactMe = ({ socials }) => {
         <ul>
           {socials.map((social) => (
             <li key={social.node.id} className="mb-2">
-              <a href={social.node.link} target="_blank" className="flex gap-4 items-center" style={{ backgroundColor: social.node.color.hex }}>
-                <div className="w-8 h-8 relative">
-                  <Image src={social.node.icon.url} layout="fill" alt={social.node.name} />
+              <a href={social.node.link} target="_blank" className="flex gap-4 h-8 items-center" style={{ backgroundColor: social.node.color.hex }}>
+                <div className="h-8 w-8">
+                  <Image src={social.node.icon.url} layout="fixed" width={32} height={32} alt={social.node.name} />
                 </div>
                 <p className="text-white">{social.node.name}</p>
               </a>
