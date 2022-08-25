@@ -8,7 +8,9 @@ const FeaturedNews = ({ featuredNews }) => {
     <React.Fragment>
       <div className="border-t-2 border-rose-600 mb-8 relative">
         <h3 className="text-lg font-bold uppercase text-white bg-rose-600 inline-block px-4 mb-4">Featured News</h3>
-        <a className="absolute right-0 top-1 cursor-pointer hover:text-red-500 uppercase text-sm font-semibold">View All</a>
+        <Link href="/">
+          <a className="absolute right-0 top-1 cursor-pointer hover:text-red-500 uppercase text-sm font-semibold">View All</a>
+        </Link>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           <div className="lg:col-span-6 col-span-1 border-b border-zinc-300 pb-2">
             <Link href={featuredNews[0].slug}>
@@ -31,7 +33,7 @@ const FeaturedNews = ({ featuredNews }) => {
           </div>
           <ul className="lg:col-span-6 col-span-1 grid grid-rows-4 lg:grid-rows-2 grid-flow-col gap-2 xl:gap-4">
             {featuredNews.slice(1).map((post) => (
-              <li key={post.id} className="border-b border-zinc-300 grid grid-cols-12 lg:grid-cols-none lg:grid-rows-1 gap-2 pb-2 lb:pb-0 border">
+              <li key={post.id} className="border-b border-zinc-300 grid grid-cols-12 lg:grid-cols-none lg:grid-rows-1 gap-2 pb-2 lb:pb-0">
                 <Link href={post.slug}>
                   <a className="col-span-4 lg:col-span-12 h-[auto] min-h-[7rem] max-h-[8.5rem] relative">
                     <Image src={post.featuredImage.url} layout="fill" alt="" className="object-cover" />

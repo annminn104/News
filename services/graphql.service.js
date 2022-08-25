@@ -216,6 +216,7 @@ export const getPostDetails = async (slug) => {
           raw
         }
         categories {
+          id
           name
           slug
         }

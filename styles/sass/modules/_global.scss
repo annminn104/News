@@ -28,7 +28,8 @@ body {
 }
 
 .not-found {
-  max-height: calc(100vh - 64px);
+  height: calc(100vh - 192px);
+  // height: 100%;
 }
 
 @media screen and (max-width: 1440px) {

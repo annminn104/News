@@ -8,7 +8,9 @@ const DontMiss = ({ dontMiss }) => {
     <React.Fragment>
       <div className="border-t-2 border-teal-600 mb-8 relative">
         <h3 className="text-lg font-bold uppercase text-white bg-teal-600 inline-block px-4 mb-4">Don&apos;t Miss</h3>
-        <a className="absolute right-0 top-1 cursor-pointer hover:text-teal-500 uppercase text-sm font-semibold">View All</a>
+        <Link href="/">
+          <a className="absolute right-0 top-1 cursor-pointer hover:text-teal-500 uppercase text-sm font-semibold">View All</a>
+        </Link>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           {dontMiss.slice(0, 2).map((post) => (
             <div key={post.id} className="lg:col-span-6 col-span-1 border ">

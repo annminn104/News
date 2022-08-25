@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 import { ContactMe } from "../components/contact-me";
 import { PopularPost } from "../components/popular-post";
@@ -19,6 +20,12 @@ const PostPage = ({ socials, popularPost, post }) => {
 
   return (
     <React.Fragment>
+      {post && (
+        <Head>
+          <title>{post.title}</title>
+          <meta name="description" content={post.excerpt} />
+        </Head>
+      )}
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 z-20">
           <div className="lg:col-span-4 col-span-1 px-4 lg:px-8 border-r border-zinc-300  lg:order-1 order-2">

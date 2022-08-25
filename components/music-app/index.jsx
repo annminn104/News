@@ -54,8 +54,8 @@ const MusicApp = () => {
       {musics && (
         <Musics.Provider value={{ musics, currentMusic, indexMusic, handleSetMusic, setIsPlaying }}>
           <div
-            className={`fixed justify-center z-50 bottom-0 lg:right-8 lg:top-auto lg:bottom-8 ${
-              settingMusic ? "w-screen sm:w-[30rem] border rounded-b-none bg-white right-0" : "rounded-2xl border h-14 right-4"
+            className={`fixed justify-center z-50 bottom-2 md:right-8 md:bottom-8 ${
+              settingMusic ? "w-screen sm:w-[30rem] border rounded-b-none bg-white right-0" : "rounded-2xl border h-14 right-2"
             } music-app`}
           >
             <div className={`${settingMusic ? "py-4 max-h-[50rem] " : "py-0"} music-app-container`}>
@@ -79,29 +79,23 @@ const MusicApp = () => {
                       d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
                     />
                   </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="absolute animate-ping  h-full w-full p-2 mb-0 text-rose-500 opacity-75"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
-                    />
-                  </svg>
+                  {isPlaying && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="absolute animate-ping  h-full w-full p-2 mb-0 text-rose-500 opacity-75"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                      />
+                    </svg>
+                  )}
                 </span>
-                {/* {isPlaying && (
-                  <div className="absolute top-0 left-0">
-                    <span className="flex h-3 w-3">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-3 w-3 bg-rose-500"></span>
-                    </span>
-                  </div>
-                )} */}
               </button>
             </div>
           </div>

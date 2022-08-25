@@ -8,12 +8,14 @@ const LastestUpdate = ({ lastestUpdate }) => {
     <React.Fragment>
       <div className="border-t-2 border-cyan-600 mb-8 relative">
         <h3 className="text-lg font-bold uppercase text-white bg-cyan-600 inline-block px-4 mb-4">Lastest Update</h3>
-        <a className="absolute right-0 top-1 cursor-pointer hover:text-cyan-500 uppercase text-sm font-semibold">View All</a>
+        <Link href="/">
+          <a className="absolute right-0 top-1 cursor-pointer hover:text-cyan-500 uppercase text-sm font-semibold">View All</a>
+        </Link>
         <ul className="grid grid-rows-3 grid-flow-col gap-2">
           {lastestUpdate.map((post) => (
             <li key={post.id} className="pb-2 border-b border-zinc-300 grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-4">
               <Link href={post.slug}>
-                <a className="lg:col-span-5 col-span-1 relative h-[12rem]">
+                <a className="lg:col-span-5 col-span-1 relative h-[10rem]">
                   <Image src={post.featuredImage.url} layout="fill" alt="" className="object-cover" />
                 </a>
               </Link>
@@ -26,7 +28,7 @@ const LastestUpdate = ({ lastestUpdate }) => {
                 <div className="flex gap-2 items-center">
                   <p className="text-xs font-semibold">{post.author.name}</p>
                   <p className="text-xs text-gray-500">{moment(post.createdAt).format("MMM DD, YYYY")}</p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {post.categories.map((category) => (
                       <div key={category.id} className="flex gap-1 items-center">
                         <p className="text-xs bg-zinc-200 py-1 px-2 rounded-xl hover:bg-rose-400 hover:text-white">{category.name}</p>

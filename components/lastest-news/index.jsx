@@ -8,11 +8,13 @@ const LastestNews = ({ lastestNews }) => {
     <React.Fragment>
       <div className="border-t-2 border-violet-600 mb-8 relative">
         <h3 className="text-lg font-bold uppercase text-white bg-violet-600 inline-block px-4 mb-4">Lastest News</h3>
-        <a className="absolute right-0 top-1 cursor-pointer hover:text-violet-500 uppercase text-sm font-semibold">View All</a>
+        <Link href="/">
+          <a className="absolute right-0 top-1 cursor-pointer hover:text-violet-500 uppercase text-sm font-semibold">View All</a>
+        </Link>
         <ul>
           {lastestNews.map((post) => (
             <li key={post.id}>
-              <div className="grid grid-cols-12 gap-2 lg:gap-4 py-2 first:pt-0 border-b border-zinc-300">
+              <div className="grid grid-cols-12 gap-2 lg:gap-4 py-2 first:pt-0 border-b mb-2 border-zinc-300">
                 <div className="col-span-4">
                   <Link href={post.slug}>
                     <a className="block relative h-[10rem]">
@@ -21,7 +23,7 @@ const LastestNews = ({ lastestNews }) => {
                   </Link>
                 </div>
                 <div className="col-span-8 flex flex-col justify-center">
-                  <div className="flex items-center gap-2 b">
+                  <div className="flex items-center gap-2">
                     <div className="w-8 h-8 relative">
                       <Image src={post.author.photo.url} layout="fill" alt={post.title} className="object-cover rounded-full" />
                     </div>
