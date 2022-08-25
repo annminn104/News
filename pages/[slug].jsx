@@ -38,7 +38,7 @@ const PostPage = ({ socials, popularPost, post }) => {
             {post && (
               <>
                 <PostDetail post={post} />
-                <Author author={post?.author} />
+                <Author author={post.author} />
                 <FacebookAction href={process.env.NEXT_PUBLIC_VERCEL_URI} numPosts={5} width="100%" />
               </>
             )}

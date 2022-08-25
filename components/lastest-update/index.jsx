@@ -17,6 +17,7 @@ const LastestUpdate = ({ lastestUpdate }) => {
               <Link href={post.slug}>
                 <a className="lg:col-span-5 col-span-1 relative h-[10rem]">
                   <Image src={post.featuredImage.url} layout="fill" alt="" className="object-cover" />
+                  <span className="sr-only">{post.title}</span>
                 </a>
               </Link>
               <div className="lg:col-span-7 col-span-1 flex flex-col justify-center">

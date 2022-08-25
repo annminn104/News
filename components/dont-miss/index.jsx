@@ -18,6 +18,7 @@ const DontMiss = ({ dontMiss }) => {
                 <Link href={post.slug}>
                   <a className="relative h-[16rem] w-full block">
                     <Image src={post.featuredImage.url} layout="fill" alt={post.title} className="object-cover" />
+                    <span className="sr-only">{post.title}</span>
                   </a>
                 </Link>
                 <div className="absolute flex flex-col gap-1 mb:gap-2 left-0 bottom-0 px-4 py-2 w-full backdrop-blur-md bg-white/20">
@@ -42,6 +43,7 @@ const DontMiss = ({ dontMiss }) => {
                 <Link href={post.slug}>
                   <a className="col-span-4 lg:col-span-5 h-[auto] min-h-[7rem] max-h-[8.5rem] relative">
                     <Image src={post.featuredImage.url} layout="fill" alt={post.title} className="object-cover" />
+                    <span className="sr-only">{post.title}</span>
                   </a>
                 </Link>
                 <div className="col-span-8 lg:col-span-7 flex flex-col gap-1">

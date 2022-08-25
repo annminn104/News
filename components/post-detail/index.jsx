@@ -4,7 +4,6 @@ import moment from "moment";
 import { getContentFragment } from "../editor";
 
 const PostDetail = ({ post }) => {
-  console.log(post);
   return (
     <React.Fragment>
       <div className="my-[1.25rem] post-detail">

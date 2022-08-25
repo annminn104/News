@@ -16,6 +16,7 @@ const FeaturedNews = ({ featuredNews }) => {
             <Link href={featuredNews[0].slug}>
               <a className="block relative h-[24rem] lg:h-[18rem] mb-2">
                 <Image src={featuredNews[0].featuredImage.url} layout="fill" alt="" className="object-cover" />
+                <span className="sr-only">{featuredNews[0].title}</span>
               </a>
             </Link>
             <div className="flex flex-col gap-1 md:gap-2">
@@ -37,6 +38,7 @@ const FeaturedNews = ({ featuredNews }) => {
                 <Link href={post.slug}>
                   <a className="col-span-4 lg:col-span-12 h-[auto] min-h-[7rem] max-h-[8.5rem] relative">
                     <Image src={post.featuredImage.url} layout="fill" alt="" className="object-cover" />
+                    <span className="sr-only">{post.title}</span>
                   </a>
                 </Link>
                 <div className="col-span-8 lg:col-span-12 w-full flex flex-col mb-1 justify-center">
