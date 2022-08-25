@@ -1,5 +1,4 @@
 import React from "react";
-import Draggable from "react-draggable";
 
 import { Header } from "../header";
 import { Footer } from "../footer";
