@@ -5,7 +5,7 @@ const SEO = () => {
   return (
     <React.Fragment>
       <NextSeo
-        title="News"
+        title="News Anh Minh"
         description="Build web to learn NextJS and TailwindCSS"
         canonical="https://www.canonical.ie/"
         robotsProps={{

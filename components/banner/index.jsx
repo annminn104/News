@@ -59,6 +59,7 @@ const Banner = ({ banner }) => {
     <React.Fragment>
       <div className="mb-10">
         <Carousel
+          infinite
           customRightArrow={<CustomRightArrow />}
           customLeftArrow={<CustomLeftArrow />}
           ssr={true}
