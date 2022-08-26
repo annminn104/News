@@ -25,7 +25,7 @@ const PostDetail = ({ post }) => {
               <span className="align-middle text-gray-500">{moment(post?.createdAt).format("MMM DD, YYYY")}</span>
             </div>
           </div>
-          <div className="flex flex-wrap gap-2 items-center mb-2">
+          <div className="flex flex-wrap gap-2 items-center mb-2 break-words text-ellipsis overflow-hidden">
             {post.categories.map((category) => (
               <div key={category.id} className="flex gap-1 items-center bg-zinc-200 py-1 px-2 rounded-2xl hover:text-rose-500">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
@@ -43,7 +43,7 @@ const PostDetail = ({ post }) => {
           </div>
 
           <h1 className="mb-4 text-3xl font-semibold">{post?.title}</h1>
-          {getContentFragment(post.content.raw.children)}
+          <div className="break-words text-ellipsis overflow-hidden">{getContentFragment(post.content.raw.children)}</div>
         </div>
       </div>
     </React.Fragment>
