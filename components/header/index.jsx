@@ -39,7 +39,7 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <nav className="fixed bg-zinc-200 to-blue-100 py-2.5 w-full z-50 top-0 left-0 shadow-sm shadow-gray-300 header">
+      <nav className="fixed bg-rose-50 py-2.5 w-full z-50 top-0 left-0 shadow-sm shadow-gray-300 header">
         <div className="container flex flex-wrap justify-between items-center mx-auto px-4 lg:px-8">
           <Link href="/">
             <a className="cursor-pointer font-bold text-3xl text-amber-600 hover:text-rose-600">News</a>
@@ -59,15 +59,6 @@ const Header = () => {
                   <a className="font-semibold">Home</a>
                 </Link>
               </li>
-              {/* <li className="py-2 px-4 md:px-0 hover:bg-amber-100 md:text-amber-500 md:hover:text-rose-600 md:hover:bg-transparent w-full text-center">
-                <a className="font-semibold">About</a>
-              </li>
-              <li className="py-2 px-4 md:px-0 hover:bg-amber-100 md:text-amber-500 md:hover:text-rose-600 md:hover:bg-transparent w-full text-center">
-                <a className="font-semibold">Category</a>
-              </li>
-              <li className="py-2 px-4 md:px-0 hover:bg-amber-100 md:text-amber-500 md:hover:text-rose-600 md:hover:bg-transparent w-full text-center">
-                <a className="font-semibold">Contact</a>
-              </li> */}
             </ul>
           </div>
           <button onClick={handleShowMenu} className={`${isMobile ? "block" : "hidden"}`}>

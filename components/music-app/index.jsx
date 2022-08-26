@@ -58,7 +58,7 @@ const MusicApp = () => {
               settingMusic ? "w-screen sm:w-[30rem] border rounded-b-none bg-white right-0" : "rounded-2xl border h-14 right-2"
             } music-app`}
           >
-            <div className={`${settingMusic ? "py-4 max-h-[50rem] " : "py-0"} music-app-container`}>
+            <div className={`${settingMusic ? "py-4 max-h-[50rem]" : "py-0"} music-app-container`}>
               <button className={`absolute top-2 left-2 ${settingMusic ? "" : "hidden"}`} onClick={handleSettingMusic}>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-gray-500 hover:text-amber-600" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -72,7 +72,14 @@ const MusicApp = () => {
 
               <button onClick={handleSettingMusic} className={`${settingMusic ? "hidden" : ""}`} aria-label="music-control">
                 <span className="relative flex h-14 w-14">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-full w-full p-2 mb-0 text-rose-500 hover:bg-rose-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-full w-full p-2 mb-0 text-rose-500 hover:bg-rose-100 rounded-2xl"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"

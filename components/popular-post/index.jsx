@@ -10,24 +10,26 @@ const PopularPost = ({ popularPost }) => {
         <h3 className="text-lg font-bold uppercase text-white bg-black inline-block px-4 mb-4">Popular Post</h3>
         <div className="grid grid-cols-1">
           <div className="mb-2">
-            <div className="flex gap-4 h-[20rem] relative">
-              <Link href={popularPost[0].slug}>
-                <a className="h-[16rem] w-full relative block">
-                  <Image src={popularPost[0].featuredImage.url} layout="fill" alt={popularPost[0].title} className="object-cover" />
-                </a>
-              </Link>
-              <div className="absolute left-0 bottom-0 px-4 py-2 w-full backdrop-blur-md bg-white/20">
-                <div className="flex justify-between mb-1/2 gap-2">
-                  <p className="text-sm font-semibold">{popularPost[0].author.name}</p>
-                  <p className="text-sm">{moment(popularPost[0].createdAt).format("MMM DD, YYYY")}</p>
-                </div>
+            {popularPost[0] && (
+              <div className="flex gap-4 h-[20rem] relative">
                 <Link href={popularPost[0].slug}>
-                  <a className="hover:text-rose-600">
-                    <h4 className="font-bold lg:text-xl text-center line-clamp-2">{popularPost[0].title}</h4>
+                  <a className="h-[16rem] w-full relative block">
+                    <Image src={popularPost[0].featuredImage.url} layout="fill" alt={popularPost[0].title} className="object-cover" />
                   </a>
                 </Link>
+                <div className="absolute left-0 bottom-0 px-4 py-2 w-full backdrop-blur-md bg-white/20">
+                  <div className="flex justify-between mb-1/2 gap-2">
+                    <p className="text-sm font-semibold">{popularPost[0].author.name}</p>
+                    <p className="text-sm">{moment(popularPost[0].createdAt).format("MMM DD, YYYY")}</p>
+                  </div>
+                  <Link href={popularPost[0].slug}>
+                    <a className="hover:text-rose-600">
+                      <h4 className="font-bold lg:text-xl text-center line-clamp-2">{popularPost[0].title}</h4>
+                    </a>
+                  </Link>
+                </div>
               </div>
-            </div>
+            )}
           </div>
           <ul>
             {popularPost.slice(1).map((post) => (

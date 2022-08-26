@@ -6,10 +6,10 @@ const Footer = () => {
       <div className="container mx-auto text-white bg-black border-t-8 border-amber-300 ">
         <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-8 py-4">
           <div className="lg:col-span-4 col-span-1 px-4 lg:px-8">
-            <h1 className="text-4xl">text 1</h1>
+            <h4 className="text-4xl">text 1</h4>
           </div>
           <div className="lg:col-span-4 col-span-1 px-4 lg:px-8">
-            <h1 className="text-4xl">text 2</h1>
+            <h4 className="text-4xl">text 2</h4>
           </div>
           <div className="lg:col-span-4 col-span-1 px-4 lg:px-8">
             <ul className="list-group">
@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="bg-amber-600 px-4 lg:px-8 py-4">
-          <h1>Footer bottom</h1>
+          <h3>Footer bottom</h3>
         </div>
       </div>
     </React.Fragment>

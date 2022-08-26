@@ -16,19 +16,19 @@ export default function Home({ banner, socials, popularPost, lastestNews, featur
     <React.Fragment>
       <div className="container mx-auto">
         <BreakingNews />
-        <Banner banner={banner} />
+        {banner && <Banner banner={banner} />}
         <div className="grid grid-cols-1 lg:grid-cols-12 z-20">
           <div className="lg:col-span-4 col-span-1 px-4 lg:px-8 border-r border-zinc-300  lg:order-1 order-2">
             <div className="relative lg:sticky lg:top-16">
-              <ContactMe socials={socials} />
-              <PopularPost popularPost={popularPost} />
+              {socials && <ContactMe socials={socials} />}
+              {popularPost && <PopularPost popularPost={popularPost} />}
             </div>
           </div>
           <div className="lg:col-span-8 col-span-1 px-4 lg:px-8 lg:order-2 order-1">
-            <LastestNews lastestNews={lastestNews} />
-            <FeaturedNews featuredNews={featuredNews} />
-            <DontMiss dontMiss={dontMiss} />
-            <LastestUpdate lastestUpdate={lastestUpdate} />
+            {lastestNews && <LastestNews lastestNews={lastestNews} />}
+            {featuredNews && <FeaturedNews featuredNews={featuredNews} />}
+            {dontMiss && <DontMiss dontMiss={dontMiss} />}
+            {lastestUpdate && <LastestUpdate lastestUpdate={lastestUpdate} />}
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@ export default function Home({ banner, socials, popularPost, lastestNews, featur
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ req, res }) {
   const [banner, socials, popularPost, featuredNews, dontMiss, lastestUpdate, lastestNews] = await Promise.all([
     getBanner(),
     getSocialMedia(),
@@ -46,6 +46,7 @@ export async function getServerSideProps() {
     getLastestUpdate(),
     getLastestNews(),
   ]);
+  res.setHeader("Cache-Control", "public, max-age=31536000, must-revalidate");
 
   return {
     props: {

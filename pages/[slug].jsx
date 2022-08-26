@@ -30,8 +30,8 @@ const PostPage = ({ socials, popularPost, post }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 z-20">
           <div className="lg:col-span-4 col-span-1 px-4 lg:px-8 border-r border-zinc-300  lg:order-1 order-2">
             <div className="relative lg:sticky lg:top-20">
-              <ContactMe socials={socials} />
-              <PopularPost popularPost={popularPost} />
+              {socials && <ContactMe socials={socials} />}
+              {popularPost && <PopularPost popularPost={popularPost} />}
             </div>
           </div>
           <div className="lg:col-span-8 col-span-1 px-4 lg:px-8 lg:order-2 order-1">
@@ -51,13 +51,15 @@ const PostPage = ({ socials, popularPost, post }) => {
 
 export default PostPage;
 
-export async function getServerSideProps({ params }) {
+export async function getServerSideProps({ params, res, req }) {
   const [socials, popularPost, post] = await Promise.all([getSocialMedia(), getPopularPost(), getPostDetails(params.slug)]);
   if (!post) {
     return {
       notFound: true,
     };
   }
+
+  res.setHeader("Cache-Control", "public, max-age=31536000, must-revalidate");
   return {
     props: {
       socials,

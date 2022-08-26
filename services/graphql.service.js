@@ -12,13 +12,13 @@ export const getLastestNews = async () => {
         excerpt
         createdAt
         featuredImage {
-          url
+          url(transformation: { image: { resize: { width: 1200, height: 900, fit: clip } }, document: { output: { format: webp } } })
         }
         author {
           name
           id
           photo {
-            url
+            url(transformation: { image: { resize: { width: 500, height: 500, fit: clip } }, document: { output: { format: webp } } })
           }
         }
         categories {
@@ -43,7 +43,7 @@ export const getSocialMedia = async () => {
             name
             title
             icon {
-              url
+              url(transformation: { image: { resize: { width: 32, height: 32, fit: clip } }, document: { output: { format: webp } } })
             }
             color {
               hex
@@ -69,7 +69,7 @@ export const getPopularPost = async () => {
           name
         }
         featuredImage {
-          url
+          url(transformation: { image: { resize: { width: 1200, height: 900, fit: clip } }, document: { output: { format: webp } } })
         }     
       }
     }   
@@ -91,7 +91,7 @@ export const getBanner = async () => {
           name
         }
         featuredImage {
-          url
+          url(transformation: { image: { resize: { width: 1536, height: 673, fit: clip } }, document: { output: { format: webp } } })         
         }     
       }
     }   
@@ -113,7 +113,7 @@ export const getFeaturedNews = async () => {
           name
         }
         featuredImage {
-          url
+          url(transformation: { image: { resize: { width: 1200, height: 900, fit: clip } }, document: { output: { format: webp } } })
         }     
       }
     }   
@@ -135,7 +135,7 @@ export const getDontMiss = async () => {
           name
         }
         featuredImage {
-          url
+          url(transformation: { image: { resize: { width: 1200, height: 900, fit: clip } },  document: { output: { format: webp } } })     
         }     
       }
     }   
@@ -157,7 +157,7 @@ export const getLastestUpdate = async () => {
           name
         }
         featuredImage {
-          url
+          url(transformation: { image: { resize: { width: 1200, height: 900, fit: clip } }, document: { output: { format: webp } } })
         } 
         categories {
           id
@@ -179,12 +179,12 @@ export const getMusics = async () => {
         artist
         link
         image {
-          url
+          url(transformation: { image: { resize: { width: 500, height: 500, fit: clip } }, document: { output: { format: webp } } })
         }
         author {
           name
           photo {
-            url
+            url(transformation: { image: { resize: { width: 500, height: 500, fit: clip } }, document: { output: { format: webp } } })
           }
         }
       }
@@ -201,13 +201,13 @@ export const getPostDetails = async (slug) => {
         title
         excerpt
         featuredImage {
-          url
+          url(transformation: { image: { resize: { width: 1200, height: 900, fit: clip } }, document: { output: { format: webp } } })
         }
         author {
           name
           bio
           photo {
-            url
+            url(transformation: { image: { resize: { width: 500, height: 500, fit: clip } }, document: { output: { format: webp } } })
           }
         }
         createdAt
