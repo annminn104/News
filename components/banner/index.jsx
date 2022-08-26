@@ -72,18 +72,7 @@ const Banner = ({ banner }) => {
           {banner.map((post) => (
             <div className="banner-item" key={post.id}>
               <div className="absolute top-0 text-4xl left-0 right-0 bottom-0 w-full max-h-[55rem] banner-item-image">
-                <Image
-                  src={post.featuredImage.url}
-                  layout="fill"
-                  alt=""
-                  // placeholder="blur"
-                  // blurDataURL={imageBlur}
-                  priority="true"
-                  objectFit="cover"
-                  objectPosition="center center"
-                  quality="30"
-                  
-                />
+                <Image src={post.featuredImage.url} layout="fill" alt="" placeholder="blur" blurDataURL={imageBlur} priority="true" objectFit="cover" objectPosition="center center" quality="30" />
               </div>
               <div className="banner-item-content">
                 <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-amber-500 mb-2">{post.title}</h1>
