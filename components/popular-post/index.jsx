@@ -17,7 +17,7 @@ const PopularPost = ({ popularPost }) => {
                     <Image src={popularPost[0].featuredImage.url} layout="fill" alt={popularPost[0].title} className="object-cover" />
                   </a>
                 </Link>
-                <div className="absolute left-0 bottom-0 px-4 py-2 w-full backdrop-blur-md bg-white/20">
+                <div className="absolute left-0 bottom-6 px-4 py-2 w-full backdrop-blur-md bg-white/20">
                   <div className="flex justify-between mb-1/2 gap-2">
                     <p className="text-sm font-semibold">{popularPost[0].author.name}</p>
                     <p className="text-sm">{moment(popularPost[0].createdAt).format("MMM DD, YYYY")}</p>

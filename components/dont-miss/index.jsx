@@ -21,7 +21,7 @@ const DontMiss = ({ dontMiss }) => {
                     <span className="sr-only">{post.title}</span>
                   </a>
                 </Link>
-                <div className="absolute flex flex-col gap-1 mb:gap-2 left-0 bottom-0 px-4 py-2 w-full backdrop-blur-md bg-white/20">
+                <div className="absolute flex flex-col gap-1 mb:gap-2 left-0 bottom-6 px-4 py-2 w-full backdrop-blur-md bg-white/20">
                   <Link href={post.slug}>
                     <a className="hover:text-rose-600">
                       <h4 className="md:text-xl font-bold text-center line-clamp-2">{post.title}</h4>
