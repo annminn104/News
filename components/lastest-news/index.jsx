@@ -17,7 +17,7 @@ const LastestNews = ({ lastestNews }) => {
               <div className="grid grid-cols-12 gap-2 lg:gap-4 py-2 first:pt-0 border-b mb-2 border-zinc-300">
                 <div className="col-span-4">
                   <Link href={post.slug}>
-                    <a className="block relative h-[10rem]">
+                    <a className="block relative h-[10rem] dark:border">
                       <Image src={post.featuredImage.url} layout="fill" alt={post.title} className="lef-0 object-cover" />
                     </a>
                   </Link>
@@ -27,7 +27,7 @@ const LastestNews = ({ lastestNews }) => {
                     <div className="w-8 h-8 relative">
                       <Image src={post.author.photo.url} layout="fill" alt={post.title} className="object-cover rounded-full" />
                     </div>
-                    <p className="text-sm font-medium" data-tip={post.author.nam}>
+                    <p className="text-sm font-medium" data-tip={post.author.name}>
                       {post.author.name}
                     </p>
                   </div>

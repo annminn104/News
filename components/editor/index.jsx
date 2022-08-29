@@ -36,7 +36,7 @@ export const getContentFragment = (content) => {
           p: ({ children }) => <p className="mb-4">{children}</p>,
           ul: ({ children }) => <ul className="mb-4 list-disc">{children}</ul>,
           ol: ({ children }) => <ol className="mb-4 list-decimal">{children}</ol>,
-          li: ({ children }) => <li className="ml-4 lg:ml-8">{children}</li>,
+          li: ({ children }) => <li className="ml-6 lg:ml-8">{children}</li>,
           img: ({ children }) => (
             <div className="mb-4 flex justify-center">
               <img src={children.props.parent.src} width={children.props.parent.width} height={children.props.parent.height} alt={children.props.parent.title} />

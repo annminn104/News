@@ -15,7 +15,7 @@ const FeaturedNews = ({ featuredNews }) => {
           {featuredNews[0] && (
             <div className="lg:col-span-6 col-span-1 border-b border-zinc-300 pb-2">
               <Link href={featuredNews[0].slug}>
-                <a className="block relative h-[24rem] lg:h-[18rem] mb-2">
+                <a className="block relative h-[24rem] lg:h-[18rem] mb-2 dark:border">
                   <Image src={featuredNews[0].featuredImage.url} layout="fill" alt={featuredNews[0].title} className="object-cover" />
                   <span className="sr-only">{featuredNews[0].title}</span>
                 </a>
@@ -38,7 +38,7 @@ const FeaturedNews = ({ featuredNews }) => {
             {featuredNews.slice(1).map((post) => (
               <li key={post.id} className="border-b border-zinc-300 grid grid-cols-12 lg:grid-cols-none lg:grid-rows-1 gap-2 pb-2 lb:pb-0">
                 <Link href={post.slug}>
-                  <a className="col-span-4 lg:col-span-12 h-[auto] min-h-[7rem] max-h-[8.5rem] relative">
+                  <a className="col-span-4 lg:col-span-12 h-[auto] min-h-[7rem] max-h-[8.5rem] relative dark:border">
                     <Image src={post.featuredImage.url} layout="fill" alt="" className="object-cover" />
                     <span className="sr-only">{post.title}</span>
                   </a>

@@ -13,15 +13,15 @@ const DontMiss = ({ dontMiss }) => {
         </Link>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           {dontMiss.slice(0, 2).map((post) => (
-            <div key={post.id} className="lg:col-span-6 col-span-1 border ">
+            <div key={post.id} className="lg:col-span-6 col-span-1  ">
               <div className="flex gap-4 h-[20rem] relative">
                 <Link href={post.slug}>
-                  <a className="relative h-[16rem] w-full block">
+                  <a className="relative h-[16rem] w-full block dark:border">
                     <Image src={post.featuredImage.url} layout="fill" alt={post.title} className="object-cover" />
                     <span className="sr-only">{post.title}</span>
                   </a>
                 </Link>
-                <div className="absolute flex flex-col gap-1 mb:gap-2 left-0 bottom-6 px-4 py-2 w-full backdrop-blur-md bg-white/20">
+                <div className="absolute flex flex-col gap-1 mb:gap-2 left-0 bottom-6 px-4 py-2 w-full backdrop-blur-md bg-white/20 dark:border">
                   <Link href={post.slug}>
                     <a className="hover:text-rose-600">
                       <h4 className="md:text-xl font-bold text-center line-clamp-2">{post.title}</h4>
@@ -41,7 +41,7 @@ const DontMiss = ({ dontMiss }) => {
             <li key={post.id} className="py-2 border-b border-red-100">
               <div className="grid grid-cols-12 gap-2 items-center h-full w-full">
                 <Link href={post.slug}>
-                  <a className="col-span-4 lg:col-span-5 h-[auto] min-h-[7rem] max-h-[8.5rem] relative">
+                  <a className="col-span-4 lg:col-span-5 h-[auto] min-h-[7rem] max-h-[8.5rem] relative dark:border">
                     <Image src={post.featuredImage.url} layout="fill" alt={post.title} className="object-cover" />
                     <span className="sr-only">{post.title}</span>
                   </a>

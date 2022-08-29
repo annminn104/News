@@ -15,7 +15,7 @@ const LastestUpdate = ({ lastestUpdate }) => {
           {lastestUpdate.map((post) => (
             <li key={post.id} className="pb-2 border-b border-zinc-300 grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-4">
               <Link href={post.slug}>
-                <a className="lg:col-span-5 col-span-1 relative h-[10rem]">
+                <a className="lg:col-span-5 col-span-1 relative h-[10rem] dark:border">
                   <Image src={post.featuredImage.url} layout="fill" alt="" className="object-cover" />
                   <span className="sr-only">{post.title}</span>
                 </a>
@@ -32,7 +32,7 @@ const LastestUpdate = ({ lastestUpdate }) => {
                   <div className="flex flex-wrap gap-2">
                     {post.categories.map((category) => (
                       <div key={category.id} className="flex gap-1 items-center">
-                        <p className="text-xs bg-zinc-200 py-1 px-2 rounded-xl hover:bg-rose-400 hover:text-white">{category.name}</p>
+                        <p className="text-xs bg-zinc-200 py-1 px-2 rounded-xl hover:bg-rose-500 hover:text-white dark:text-black dark:hover:text-white">{category.name}</p>
                       </div>
                     ))}
                   </div>

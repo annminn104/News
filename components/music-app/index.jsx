@@ -55,12 +55,12 @@ const MusicApp = () => {
         <Musics.Provider value={{ musics, currentMusic, indexMusic, handleSetMusic, setIsPlaying }}>
           <div
             className={`fixed justify-center z-50 bottom-2 md:right-8 md:bottom-8 ${
-              settingMusic ? "w-screen sm:w-[30rem] border rounded-b-none bg-white right-0" : "rounded-2xl border h-14 right-2"
+              settingMusic ? "w-screen sm:w-[30rem] border rounded-b-none bg-white dark:bg-gray-600 dark:text-white right-0 !bottom-0" : "rounded-2xl border h-14 right-2"
             } music-app`}
           >
             <div className={`${settingMusic ? "py-4 max-h-[50rem]" : "py-0"} music-app-container`}>
               <button className={`absolute top-2 left-2 ${settingMusic ? "" : "hidden"}`} onClick={handleSettingMusic}>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-gray-500 hover:text-amber-600" viewBox="0 0 20 20" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-gray-500 dark:text-white hover:text-rose-600 dark:hover:text-rose-600" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </button>

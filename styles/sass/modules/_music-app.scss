@@ -1,8 +1,15 @@
 .music-app {
   &-container {
-    @media screen and (max-height: 698px) {
-      max-height: calc(100vh - 58px);
+    @media screen and (max-height: 794px) {
+      max-height: calc(100vh - 56px);
       overflow-y: auto;
     }
+  }
+}
+
+.rhap_time {
+  &.rhap_current-time,
+  &.rhap_total-time {
+    color: gray;
   }
 }

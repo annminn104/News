@@ -7,16 +7,14 @@ const PostDetail = ({ post }) => {
   return (
     <React.Fragment>
       <div className="my-[1.25rem] post-detail">
-        <div className="h-full overflow-hidden border border-slate-300 mb-4">
-          <div className="relative h-[30rem] w-full">
-            <Image src={post.featuredImage.url} layout="fill" alt="" className="object-cover" />
-          </div>
+        <div className="relative h-[30rem] w-full mb-4 dark:border">
+          <Image src={post.featuredImage.url} layout="fill" alt="" className="object-cover" />
         </div>
         <div className="post-detail-content">
           <div className="flex items-center justify-between mb-2 w-full">
             <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8">
               <Image src={post.author.photo.url} height="40px" width="40px" className="align-middle rounded-full" alt={post.author.name} />
-              <p className="inline align-middle text-gray-700 ml-2 font-semibold text-lg">{post.author.name}</p>
+              <p className="inline align-middle text-gray-700 ml-2 font-semibold text-lg dark:text-white">{post.author.name}</p>
             </div>
             <div className="font-medium text-gray-700">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -27,8 +25,8 @@ const PostDetail = ({ post }) => {
           </div>
           <div className="flex flex-wrap gap-2 items-center mb-2 break-words text-ellipsis overflow-hidden">
             {post.categories.map((category) => (
-              <div key={category.id} className="flex gap-1 items-center bg-zinc-200 py-1 px-2 rounded-2xl hover:text-rose-500">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
+              <div key={category.id} className="flex gap-1 items-center bg-zinc-200 py-1 px-2 rounded-2xl hover:text-rose-500 dark:text-black dark:hover:text-white dark:hover:bg-rose-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 ">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -36,12 +34,10 @@ const PostDetail = ({ post }) => {
                   />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
                 </svg>
-
                 <p className="">{category.name}</p>
               </div>
             ))}
           </div>
-
           <h1 className="mb-4 text-3xl font-semibold">{post?.title}</h1>
           <div className="break-words text-ellipsis overflow-hidden">{getContentFragment(post.content.raw.children)}</div>
         </div>

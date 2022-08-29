@@ -39,18 +39,15 @@ const DetailMusic = () => {
   };
 
   const handleCompletePlay = (event) => {
-    // console.log("end", event);
     handleSetMusic(indexMusic + 1);
   };
 
   const handlePlaying = (event) => {
-    // console.log("playing", event);
     setIsPlaying(true);
     setIsStop(true);
   };
 
   const handlePause = (event) => {
-    // console.log("pause", event);
     setIsPlaying(false);
     setIsStop(false);
   };
@@ -59,7 +56,6 @@ const DetailMusic = () => {
     <React.Fragment>
       {currentMusic && (
         <div className="flex flex-col items-center mb-3">
-          {/* <Image src={currentMusic?.image?.url} width={200} height={200} alt="" className="rounded-xl object-cover shadow-cyan-500/50" /> */}
           <div className="w-72 h-72 bg-transparent">
             <svg viewBox="0 0 500 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="288px" height="288px" id="blobSvg">
               <defs>

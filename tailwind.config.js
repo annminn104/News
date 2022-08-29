@@ -2,9 +2,26 @@
 
 module.exports = {
   mode: "jit",
-  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {},
+  darkMode: "class",
+  purge: {
+    enabled: true,
+    content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+    options: {
+      safelist: ["dark"], //specific classes
+    },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  theme: {
+    typography: (theme) => ({}),
+    extend: {
+      dark: {
+        css: {
+          color: "white",
+        },
+      },
+    },
+  },
+  variants: {
+    typography: ["dark"],
+  },
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/line-clamp")],
 };

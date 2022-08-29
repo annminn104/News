@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@graphcms/rich-text-react-renderer": "^0.6.1",
-    "@tailwindcss/line-clamp": "^0.4.0",
     "graphql": "^16.6.0",
     "graphql-request": "^4.3.0",
     "lottie-react": "^2.3.1",
     "moment": "^2.29.4",
     "next": "12.2.5",
     "next-seo": "^5.5.0",
+    "next-themes": "^0.2.0",
     "plaiceholder": "^2.4.0",
     "prismjs": "^1.28.0",
     "react": "18.2.0",
@@ -29,6 +29,8 @@
     "sharp": "^0.30.7"
   },
   "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.4",
     "autoprefixer": "^10.4.8",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",

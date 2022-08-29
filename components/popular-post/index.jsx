@@ -13,11 +13,11 @@ const PopularPost = ({ popularPost }) => {
             {popularPost[0] && (
               <div className="flex gap-4 h-[20rem] relative">
                 <Link href={popularPost[0].slug}>
-                  <a className="h-[16rem] w-full relative block">
+                  <a className="h-[16rem] w-full relative block dark:border">
                     <Image src={popularPost[0].featuredImage.url} layout="fill" alt={popularPost[0].title} className="object-cover" />
                   </a>
                 </Link>
-                <div className="absolute left-0 bottom-6 px-4 py-2 w-full backdrop-blur-md bg-white/20">
+                <div className="absolute left-0 bottom-6 px-4 py-2 w-full backdrop-blur-md bg-white/20 dark:border">
                   <div className="flex justify-between mb-1/2 gap-2">
                     <p className="text-sm font-semibold">{popularPost[0].author.name}</p>
                     <p className="text-sm">{moment(popularPost[0].createdAt).format("MMM DD, YYYY")}</p>
@@ -36,7 +36,7 @@ const PopularPost = ({ popularPost }) => {
               <li key={post.id} className="py-2 border-b border-zinc-300">
                 <div className="grid grid-cols-12 gap-2 items-center">
                   <Link href={post.slug}>
-                    <a className="col-span-4 lg:col-span-5 h-[7rem] relative border border-red-100">
+                    <a className="col-span-4 lg:col-span-5 h-[7rem] relative dark:border">
                       <Image src={post.featuredImage.url} layout="fill" alt={post.title} className="object-cover" />
                     </a>
                   </Link>
