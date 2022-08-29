@@ -16,7 +16,7 @@ const nextConfig = {
     defaultLocale: "en",
   },
   compiler: {
-    // removeConsole: true,
+    removeConsole: true,
   },
 };
 

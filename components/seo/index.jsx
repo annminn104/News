@@ -5,7 +5,9 @@ const SEO = () => {
   return (
     <React.Fragment>
       <NextSeo
-        title="News Anh Minh"
+        title="Blogs Anh Minh"
+        titleTemplate="Blogs Anh Minh"
+        defaultTitle="Blogs Anh Minh"
         description="Build web to learn NextJS and TailwindCSS"
         canonical="https://anhminh.vercel.app/"
         robotsProps={{
@@ -33,7 +35,7 @@ const SEO = () => {
         openGraph={{
           type: "website",
           url: "https://anhminh.vercel.app/",
-          title: "News",
+          title: "Blogs Anh Minh",
           description: "Build web to learn NextJS and TailwindCSS",
           images: [
             {
@@ -55,6 +57,11 @@ const SEO = () => {
             username: "annminn100",
             gender: "female",
           },
+        }}
+        twitter={{
+          handle: "@annminn100",
+          site: "@annminn100",
+          cardType: "summary_large_image",
         }}
       />
     </React.Fragment>
