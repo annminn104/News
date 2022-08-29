@@ -6,8 +6,8 @@ import Image from "next/image";
 const PopularPost = ({ popularPost }) => {
   return (
     <React.Fragment>
-      <div className="border-t-2 border-black mb-8">
-        <h3 className="text-lg font-bold uppercase text-white bg-black inline-block px-4 mb-4">Popular Post</h3>
+      <div className="border-t-2 border-black mb-8 dark:border-white">
+        <h3 className="text-lg font-bold uppercase text-white bg-black inline-block px-4 mb-4 dark:text-black dark:bg-white">Popular Post</h3>
         <div className="grid grid-cols-1">
           <div className="mb-2">
             {popularPost[0] && (

@@ -4,7 +4,7 @@ import Image from "next/image";
 const Author = ({ author }) => {
   return (
     <React.Fragment>
-      <div className="text-center mt-20 mb-8 p-10 relative bg-black bg-opacity-20">
+      <div className="text-center mt-20 mb-8 p-10 relative bg-black bg-opacity-20 dark:bg-white dark:bg-opacity-20">
         <div className="absolute left-0 right-0 -top-14">
           <Image src={author?.photo.url} width="100px" height="100px" className="align-middle rounded-full" alt={author.name} />
         </div>

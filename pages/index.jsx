@@ -14,7 +14,7 @@ import { getBanner, getSocialMedia, getPopularPost, getFeaturedNews, getDontMiss
 export default function Home({ banner, socials, popularPost, lastestNews, featuredNews, dontMiss, lastestUpdate }) {
   return (
     <React.Fragment>
-      <div className="container mx-auto dark:bg-gray-700">
+      <div className="container mx-auto dark:bg-slate-900">
         <BreakingNews />
         {banner && <Banner banner={banner} />}
         <div className="grid grid-cols-1 lg:grid-cols-12 z-20">

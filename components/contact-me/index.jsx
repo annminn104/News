@@ -5,8 +5,8 @@ import Image from "next/image";
 const ContactMe = ({ socials }) => {
   return (
     <React.Fragment>
-      <div className="border-t-2 border-black mb-8">
-        <h3 className="text-lg font-bold uppercase text-white bg-black inline-block px-4 mb-4">Contact me</h3>
+      <div className="border-t-2 border-black mb-8 dark:border-white">
+        <h3 className="text-lg font-bold uppercase text-white bg-black inline-block px-4 mb-4 dark:text-black dark:bg-white">Contact me</h3>
         <ul>
           {socials.map((social) => (
             <li key={social.node.id} className="mb-2">

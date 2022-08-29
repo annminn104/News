@@ -26,7 +26,7 @@ const PostPage = ({ socials, popularPost, post }) => {
           <meta name="description" content={post.excerpt} />
         </Head>
       )}
-      <div className="container mx-auto dark:bg-gray-700">
+      <div className="container mx-auto dark:bg-slate-900">
         <div className="grid grid-cols-1 lg:grid-cols-12 z-20">
           <div className="lg:col-span-4 col-span-1 px-4 lg:px-8 border-r border-zinc-300  lg:order-1 order-2">
             <div className="relative lg:sticky lg:top-20">
