@@ -35,7 +35,10 @@ const MusicApp = () => {
 
   const handleSetMusic = (idMusic) => {
     const music = musics.find((v, index) => index === idMusic);
-    if (!music) {
+    if (idMusic == -1) {
+      setCurrentMusic(musics[musics.length - 1]);
+      setIndexMusic(musics.length - 1);
+    } else if (idMusic == musics.length) {
       setCurrentMusic(musics[0]);
       setIndexMusic(0);
     } else {
@@ -70,7 +73,7 @@ const MusicApp = () => {
                 <ListMusics />
               </div>
 
-              <button onClick={handleSettingMusic} className={`${settingMusic ? "hidden" : ""}`} aria-label="music-control">
+              <button onClick={handleSettingMusic} className={`overflow-hidden ${settingMusic ? "hidden" : ""}`} aria-label="music-control">
                 <span className="relative flex h-14 w-14">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

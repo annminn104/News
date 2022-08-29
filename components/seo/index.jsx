@@ -7,7 +7,7 @@ const SEO = () => {
       <NextSeo
         title="News Anh Minh"
         description="Build web to learn NextJS and TailwindCSS"
-        canonical="https://www.canonical.ie/"
+        canonical="https://anhminh.vercel.app/"
         robotsProps={{
           nosnippet: true,
           notranslate: true,
@@ -22,17 +22,17 @@ const SEO = () => {
         }}
         mobileAlternate={{
           media: "only screen and (max-width: 767px)",
-          href: "https://m.canonical.ie",
+          href: "https://anhminh.vercel.app/",
         }}
         languageAlternates={[
           {
             hrefLang: "de-AT",
-            href: "https://www.canonical.ie/de",
+            href: "https://anhminh.vercel.app/",
           },
         ]}
         openGraph={{
           type: "website",
-          url: "https://news-of-minh.vercel.app/",
+          url: "https://anhminh.vercel.app/",
           title: "News",
           description: "Build web to learn NextJS and TailwindCSS",
           images: [
